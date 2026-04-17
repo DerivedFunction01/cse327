@@ -48,8 +48,7 @@ class Rule:
     def render(self) -> str:
         head = f"{self.head_functor}({', '.join(self.head_args)})"
         body = ", ".join(self.body)
-        suffix = f"  % {self.comment}" if self.comment else ""
-        return f"{head} :- {body}.{suffix}"
+        return f"{head} :- {body}."
 
 
 @dataclass
@@ -60,7 +59,7 @@ class RuleGroup:
     rules: list[Rule]
 
     def render(self) -> list[str]:
-        lines = [f"% {self.label}"]
+        lines = []
         for rule in self.rules:
             lines.append(rule.render())
         lines.append("")
@@ -2043,17 +2042,16 @@ def generate_facts(countries: list[Country]) -> list[str]:
         for org in c.memberships:
             sections["memberOf"].append(fact("memberOf", c.name, org))
 
-    lines = ["% --- FACTS (auto-generated) ---\n"]
+    lines = []
     for section, facts in sections.items():
         if facts:
-            lines.append(f"% {section}")
             lines.extend(facts)
             lines.append("")
     return lines
 
 
 def generate_rules(groups: list[RuleGroup]) -> list[str]:
-    lines = ["% --- RULES (auto-generated) ---\n"]
+    lines = []
     for group in groups:
         lines.extend(group.render())
     return lines
