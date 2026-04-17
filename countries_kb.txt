@@ -1,6 +1,3 @@
-% --- FACTS (auto-generated) ---
-
-% locatedIn
 locatedIn(spain, europe).
 locatedIn(france, europe).
 locatedIn(germany, europe).
@@ -197,7 +194,6 @@ locatedIn(paraguay, south_america).
 locatedIn(guyana, south_america).
 locatedIn(suriname, south_america).
 
-% currencyOf
 currencyOf(spain, euro).
 currencyOf(france, euro).
 currencyOf(germany, euro).
@@ -394,7 +390,6 @@ currencyOf(paraguay, guarani).
 currencyOf(guyana, guyanese_dollar).
 currencyOf(suriname, surinamese_dollar).
 
-% officialLanguage
 officialLanguage(spain, spanish).
 officialLanguage(france, french).
 officialLanguage(germany, german).
@@ -661,7 +656,6 @@ officialLanguage(paraguay, guarani).
 officialLanguage(guyana, english).
 officialLanguage(suriname, dutch).
 
-% cityIn
 cityIn(madrid, spain).
 cityIn(barcelona, spain).
 cityIn(paris, france).
@@ -975,8 +969,6 @@ cityIn(georgetown, guyana).
 cityIn(linden, guyana).
 cityIn(paramaribo, suriname).
 cityIn(nieuw_nickerie, suriname).
-
-% capitalOf
 capitalOf(spain, madrid).
 capitalOf(france, paris).
 capitalOf(germany, berlin).
@@ -1173,7 +1165,6 @@ capitalOf(paraguay, asuncion).
 capitalOf(guyana, georgetown).
 capitalOf(suriname, paramaribo).
 
-% borders
 borders(spain, france).
 borders(spain, portugal).
 borders(france, belgium).
@@ -1471,7 +1462,7 @@ borders(venezuela, guyana).
 borders(bolivia, paraguay).
 borders(guyana, suriname).
 
-% memberOf
+
 memberOf(spain, nato).
 memberOf(spain, eu).
 memberOf(spain, g20).
@@ -1577,15 +1568,13 @@ memberOf(chile, g20).
 memberOf(colombia, g20).
 memberOf(peru, g20).
 memberOf(uruguay, g20).
-% --- RULES (auto-generated) ---
 
-% Shared-attribute rules
+
 usesSameCurrency(X, Y) :- currencyOf(X, C), currencyOf(Y, C).
 sharesLanguage(X, Y) :- officialLanguage(X, L), officialLanguage(Y, L).
 sameRegion(X, Y) :- locatedIn(X, R), locatedIn(Y, R).
 sameAlliance(X, Y) :- memberOf(X, O), memberOf(Y, O).
 
-% City / capital location rules
 cityInContinent(City, Continent) :- cityIn(City, Country), locatedIn(Country, Continent).
 cityInRegion(City, Region) :- cityIn(City, Country), locatedIn(Country, Region).
 capitalCity(City) :- capitalOf(Country, City).
@@ -1593,26 +1582,22 @@ capitalInContinent(City, Continent) :- capitalOf(Country, City), locatedIn(Count
 capitalInAlliance(City, Org) :- capitalOf(Country, City), memberOf(Country, Org).
 cityInAlliance(City, Org) :- cityIn(City, Country), memberOf(Country, Org).
 
-% Eurozone rules
 isEurozone(Country) :- currencyOf(Country, euro).
 eurozoneCity(City) :- cityIn(City, Country), isEurozone(Country).
 
-% Border rules
-sharesBorder(X, Y) :- borders(X, Y).  % undirected — clause 1
-sharesBorder(X, Y) :- borders(Y, X).  % undirected — clause 2
+sharesBorder(X, Y) :- borders(X, Y).
+sharesBorder(X, Y) :- borders(Y, X).
 twoBorderTrip(X, Z) :- sharesBorder(X, Y), sharesBorder(Y, Z).
 borderingEurozone(X, Y) :- sharesBorder(X, Y), isEurozone(X), isEurozone(Y).
 threeBorderTrip(X, W) :- twoBorderTrip(X, Y), sharesBorder(Y, W).
 fourBorderTrip(X, V) :- threeBorderTrip(X, Y), sharesBorder(Y, V).
 
-% Alliance + region compound rules
 countryInAllianceAndRegion(Country, Org, Region) :- memberOf(Country, Org), locatedIn(Country, Region).
 cityInAllianceAndRegion(City, Org, Region) :- cityIn(City, Country), memberOf(Country, Org), locatedIn(Country, Region).
 capitalInAllianceAndRegion(City, Org, Region) :- capitalOf(Country, City), memberOf(Country, Org), locatedIn(Country, Region).
 borderNeighborAlliance(Country, Org) :- sharesBorder(Country, Neighbor), memberOf(Neighbor, Org).
 twoStepBorderNeighborAlliance(Country, Org) :- twoBorderTrip(Country, Neighbor), memberOf(Neighbor, Org).
 
-% Country-in-region helpers (auto-generated from data)
 countryInAfrica(Country) :- locatedIn(Country, africa).
 countryInAsia(Country) :- locatedIn(Country, asia).
 countryInEurope(Country) :- locatedIn(Country, europe).
