@@ -1,0 +1,100 @@
+sameRegion(City, Country).
+sameRegion(Neighbor, C).
+threeBorderTrip(ukraine, C), sameRegion(myanmar, C).
+currencyOf(City, C), currencyOf(israel, C), sameRegion(turkey, City), sameRegion(City, iraq).
+sharesLanguage(Country, Region).
+sharesLanguage(V, Neighbor).
+sharesLanguage(Y, Z).
+fourBorderTrip(Neighbor, O).
+sharesLanguage(Y, Z).
+sharesLanguage(Country, R).
+officialLanguage(City, C), threeBorderTrip(City, india), fourBorderTrip(laos, City).
+sharesLanguage(Y, V).
+sameRegion(City, Z).
+sameRegion(C, malta), sameRegion(C, City), sameRegion(united_kingdom, City).
+threeBorderTrip(R, Country).
+fourBorderTrip(monaco, C), threeBorderTrip(City, C), sameRegion(belarus, City).
+currencyOf(C, swissFranc), sameRegion(norway, C).
+fourBorderTrip(City, Continent).
+fourBorderTrip(City, Region).
+sameRegion(X, W).
+fourBorderTrip(C, vatican_city), sameRegion(estonia, C), fourBorderTrip(denmark, C).
+fourBorderTrip(W, O).
+twoBorderTrip(Continent, City).
+twoStepBorderNeighborAlliance(azerbaijan, C), cityInAllianceAndRegion(astana, C, asia).
+fourBorderTrip(X, Region).
+sameRegion(City, C), sharesLanguage(C, india), sharesLanguage(india, C), sharesLanguage(City, united_states).
+sharesLanguage(C, Neighbor).
+cityInAlliance(C, g20), cityInRegion(C, City), cityInAllianceAndRegion(moscow, Continent, City), cityInAlliance(almaty, Continent).
+sameRegion(Neighbor, X).
+threeBorderTrip(City, V).
+sharesBorder(L, Region).
+sharesLanguage(City, V).
+capitalInAllianceAndRegion(london, C, europe), cityInAllianceAndRegion(canberra, C, oceania).
+sharesLanguage(Y, Org).
+sharesLanguage(Z, Org).
+sameRegion(Country, Region).
+twoBorderTrip(Neighbor, Continent).
+officialLanguage(City, C), sharesLanguage(Continent, City), threeBorderTrip(Continent, libya), sameRegion(lesotho, Continent).
+sameAlliance(Z, L).
+sameRegion(City, Neighbor).
+twoBorderTrip(C, X).
+currencyOf(C, City), threeBorderTrip(china, C).
+fourBorderTrip(City, Z).
+threeBorderTrip(Country, Continent).
+cityInRegion(thies, C), locatedIn(tunisia, C).
+sameRegion(R, Continent).
+sharesLanguage(V, O).
+eurozoneCity(C), cityInAllianceAndRegion(C, nato, europe).
+officialLanguage(C, tamil), sameRegion(C, vietnam).
+fourBorderTrip(City, Neighbor).
+sameRegion(Country, Org).
+sameRegion(saint_vincent_and_the_grenadines, C), twoStepBorderNeighborAlliance(C, City), capitalInAlliance(washington_dc, City), sameRegion(C, el_salvador), sharesLanguage(C, jamaica).
+currencyOf(uruguay, C).
+officialLanguage(C, dutch), fourBorderTrip(kazakhstan, C).
+twoStepBorderNeighborAlliance(R, X).
+sharesLanguage(O, Continent).
+twoBorderTrip(Continent, Y).
+cityIn(C, nigeria), capitalInContinent(C, City), cityInContinent(gaborone, City).
+threeBorderTrip(Continent, Region).
+twoStepBorderNeighborAlliance(R, L).
+cityInContinent(C, City), cityInRegion(C, City), cityIn(C, cambodia), countryInAllianceAndRegion(Continent, g20, City), sameAlliance(pakistan, Continent).
+sharesLanguage(W, Neighbor).
+sharesLanguage(C, philippines), sharesLanguage(sierra_leone, C).
+twoStepBorderNeighborAlliance(C, W).
+capitalInContinent(sanaa, C), cityInContinent(baghdad, C), cityInRegion(ramallah, C), capitalInContinent(ankara, C).
+currencyOf(C, rand), sameRegion(C, C).
+currencyOf(C, City), sameRegion(C, Continent), sharesLanguage(Continent, eswatini).
+sameRegion(R, Y).
+sameRegion(O, Country).
+cityInContinent(kosice, C), cityInContinent(City, C), capitalInAllianceAndRegion(City, eu, C).
+sharesLanguage(C, City), threeBorderTrip(C, Country), sharesBorder(City, Continent), threeBorderTrip(egypt, Continent), twoBorderTrip(Country, C).
+sameRegion(Org, X).
+sharesLanguage(X, L).
+fourBorderTrip(Z, City).
+capitalOf(C, City), sharesLanguage(senegal, C), cityIn(City, C), capitalInContinent(City, africa), fourBorderTrip(palestine, C).
+sameRegion(R, V).
+threeBorderTrip(Country, Org).
+officialLanguage(C, Continent), sameRegion(City, C), sameRegion(czechia, City).
+eurozoneCity(C), cityInAllianceAndRegion(C, Continent, City), cityInAllianceAndRegion(dublin, Continent, City), twoStepBorderNeighborAlliance(north_macedonia, Continent), cityInRegion(zurich, City).
+threeBorderTrip(Country, Region).
+fourBorderTrip(V, Y).
+capitalInContinent(london, C), cityInRegion(City, C), cityIn(City, slovenia).
+twoBorderTrip(Z, Z).
+sharesLanguage(C, C), sameRegion(C, City), fourBorderTrip(City, Continent), threeBorderTrip(Continent, romania), sameRegion(C, thailand).
+cityInRegion(yerevan, C), countryInAllianceAndRegion(netherlands, nato, C).
+sharesLanguage(namibia, C), threeBorderTrip(C, panama), sharesLanguage(City, C), sharesLanguage(City, cameroon).
+cityInRegion(C, City), eurozoneCity(C), cityInAllianceAndRegion(split, eu, City), locatedIn(bulgaria, City), countryInAllianceAndRegion(belgium, nato, City).
+currencyOf(C, turkmen_manat), fourBorderTrip(moldova, C), sameRegion(laos, C).
+usesSameCurrency(Z, V).
+sameRegion(Neighbor, Neighbor).
+cityInAllianceAndRegion(abu_dhabi, brics, C), locatedIn(lebanon, C).
+officialLanguage(C, kirundi), threeBorderTrip(City, C), threeBorderTrip(tanzania, City).
+fourBorderTrip(yemen, C), twoBorderTrip(C, syria), fourBorderTrip(C, somalia).
+capitalInContinent(City, V).
+threeBorderTrip(Z, City).
+cityInContinent(City, C), cityInAllianceAndRegion(warsaw, g20, C), capitalInContinent(City, C), capitalOf(lithuania, City), cityInRegion(City, C).
+sharesLanguage(Org, C).
+fourBorderTrip(Neighbor, C).
+sameRegion(City, C), sharesLanguage(C, france), threeBorderTrip(City, south_sudan), fourBorderTrip(C, south_sudan).
+fourBorderTrip(O, Continent).
