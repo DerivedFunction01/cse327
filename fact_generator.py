@@ -247,7 +247,7 @@ COUNTRIES: list[Country] = [
     Country(
         "romania",
         "europe",
-        "leu",
+        "romanian_leu",
         ["romanian"],
         "bucharest",
         cities=["cluj_napoca"],
@@ -267,7 +267,7 @@ COUNTRIES: list[Country] = [
     Country(
         "belarus",
         "europe",
-        "ruble",
+        "belarusian_ruble",
         ["belarusian", "russian"],
         "minsk",
         cities=["gomel"],
@@ -326,7 +326,7 @@ COUNTRIES: list[Country] = [
     Country(
         "serbia",
         "europe",
-        "dinar",
+        "serbian_dinar",
         ["serbian"],
         "belgrade",
         cities=["novi_sad"],
@@ -359,7 +359,7 @@ COUNTRIES: list[Country] = [
     Country(
         "azerbaijan",
         "europe",
-        "manat",
+        "azerbaijani_manat",
         ["azerbaijani"],
         "baku",
         cities=["ganja"],
@@ -445,7 +445,7 @@ COUNTRIES: list[Country] = [
     Country(
         "moldova",
         "europe",
-        "leu",
+        "moldovan_leu",
         ["romanian"],
         "chisinau",
         cities=["balti"],
@@ -477,7 +477,7 @@ COUNTRIES: list[Country] = [
     Country(
         "russia",
         "europe",
-        "ruble",
+        "russian_ruble",
         ["russian"],
         "moscow",
         cities=["st_petersburg"],
@@ -570,7 +570,7 @@ COUNTRIES: list[Country] = [
     Country(
         "cuba",
         "north_america",
-        "peso",
+        "cuban_peso",
         ["spanish"],
         "havana",
         cities=["santiago_de_cuba"],
@@ -614,7 +614,7 @@ COUNTRIES: list[Country] = [
     Country(
         "el_salvador",
         "north_america",
-        "colon",
+        "usd",
         ["spanish"],
         "san_salvador",
         cities=["santa_ana"],
@@ -631,7 +631,7 @@ COUNTRIES: list[Country] = [
     Country(
         "dominican_republic",
         "north_america",
-        "peso",
+        "dominican_peso",
         ["spanish"],
         "santo_domingo",
         cities=["santiago_de_los_caballeros"],
@@ -712,7 +712,7 @@ COUNTRIES: list[Country] = [
     Country(
         "india",
         "asia",
-        "rupee",
+        "indian_rupee",
         ["hindi", "english"],
         "new_delhi",
         cities=["mumbai"],
@@ -731,7 +731,7 @@ COUNTRIES: list[Country] = [
     Country(
         "south_korea",
         "asia",
-        "won",
+        "south_korean_won",
         ["korean"],
         "seoul",
         cities=["busan"],
@@ -740,7 +740,7 @@ COUNTRIES: list[Country] = [
     Country(
         "north_korea",
         "asia",
-        "won",
+        "north_korean_won",
         ["korean"],
         "pyongyang",
         cities=["cheonjin"],
@@ -775,7 +775,7 @@ COUNTRIES: list[Country] = [
     Country(
         "pakistan",
         "asia",
-        "rupee",
+        "pakistani_rupee",
         ["urdu", "english"],
         "islamabad",
         cities=["karachi"],
@@ -805,7 +805,7 @@ COUNTRIES: list[Country] = [
     Country(
         "singapore",
         "asia",
-        "dollar",
+        "singapore_dollar",
         ["english", "malay", "mandarin"],
         "singapore_city",
     ),
@@ -821,7 +821,7 @@ COUNTRIES: list[Country] = [
     Country(
         "nepal",
         "asia",
-        "rupee",
+        "nepali_rupee",
         ["nepali"],
         "kathmandu",
         cities=["pokhara"],
@@ -839,7 +839,7 @@ COUNTRIES: list[Country] = [
     Country(
         "philippines",
         "asia",
-        "peso",
+        "philippine_peso",
         ["filipino", "english"],
         "manila",
         cities=["cebu_city"],
@@ -847,7 +847,7 @@ COUNTRIES: list[Country] = [
     Country(
         "bahrain",
         "middle_east",
-        "dinar",
+        "bahraini_dinar",
         ["arabic", "english"],
         "manama",
     ),
@@ -861,7 +861,7 @@ COUNTRIES: list[Country] = [
     Country(
         "brunei",
         "asia",
-        "dollar",
+        "brunei_dollar",
         ["malay", "english"],
         "bandar_seri_begawan",
     ),
@@ -885,7 +885,7 @@ COUNTRIES: list[Country] = [
     Country(
         "kyrgyzstan",
         "asia",
-        "som",
+        "kyrgyz_som",
         ["kyrgyz", "russian"],
         "bishkek",
         memberships=["cis"],
@@ -915,7 +915,7 @@ COUNTRIES: list[Country] = [
     Country(
         "sri_lanka",
         "asia",
-        "rupee",
+        "sri_lankan_rupee",
         ["sinhala", "tamil"],
         "sri_jayawardenepura_kotte",
         cities=["colombo"],
@@ -923,7 +923,7 @@ COUNTRIES: list[Country] = [
     Country(
         "tajikistan",
         "asia",
-        "somoni",
+        "tajik_somoni",
         ["tajik"],
         "dushanbe",
         memberships=["cis"],
@@ -946,14 +946,14 @@ COUNTRIES: list[Country] = [
     Country(
         "turkmenistan",
         "asia",
-        "manat",
+        "turkmen_manat",
         ["turkmen"],
         "ashgabat",
     ),
     Country(
         "uzbekistan",
         "asia",
-        "som",
+        "uzbek_som",
         ["uzbek"],
         "tashkent",
         memberships=["cis"],
@@ -971,7 +971,7 @@ COUNTRIES: list[Country] = [
     Country(
         "egypt",
         "africa",
-        "pound",
+        "egyptian_pound",
         ["arabic"],
         "cairo",
         cities=["alexandria"],
@@ -980,7 +980,7 @@ COUNTRIES: list[Country] = [
     Country(
         "kenya",
         "africa",
-        "shilling",
+        "kenyan_shilling",
         ["english", "swahili"],
         "nairobi",
         cities=["mombasa"],
@@ -1005,7 +1005,7 @@ COUNTRIES: list[Country] = [
     Country(
         "morocco",
         "africa",
-        "dirham",
+        "moroccan_dirham",
         ["arabic"],
         "rabat",
         cities=["casablanca"],
@@ -1013,7 +1013,7 @@ COUNTRIES: list[Country] = [
     Country(
         "algeria",
         "africa",
-        "dinar",
+        "algerian_dinar",
         ["arabic"],
         "algiers",
         cities=["oran"],
@@ -1022,7 +1022,7 @@ COUNTRIES: list[Country] = [
     Country(
         "tunisia",
         "africa",
-        "dinar",
+        "tunisian_dinar",
         ["arabic"],
         "tunis",
         cities=["sfax"],
@@ -1031,7 +1031,7 @@ COUNTRIES: list[Country] = [
     Country(
         "uganda",
         "africa",
-        "shilling",
+        "ugandan_shilling",
         ["english", "swahili"],
         "kampala",
         cities=["jinja"],
@@ -1039,7 +1039,7 @@ COUNTRIES: list[Country] = [
     Country(
         "tanzania",
         "africa",
-        "shilling",
+        "tanzanian_shilling",
         ["swahili", "english"],
         "dodoma",
         cities=["dar_es_salaam"],
@@ -1047,7 +1047,7 @@ COUNTRIES: list[Country] = [
     Country(
         "rwanda",
         "africa",
-        "franc",
+        "rwandan_franc",
         ["kinyarwanda", "english"],
         "kigali",
         cities=["butare"],
@@ -1055,7 +1055,7 @@ COUNTRIES: list[Country] = [
     Country(
         "senegal",
         "africa",
-        "franc",
+        "cfa_franc",
         ["french"],
         "dakar",
         cities=["thies"],
@@ -1071,7 +1071,7 @@ COUNTRIES: list[Country] = [
     Country(
         "zimbabwe",
         "africa",
-        "dollar",
+        "zimbabwe_dollar",
         ["english", "shona"],
         "harare",
         cities=["bulawayo"],
@@ -1109,7 +1109,7 @@ COUNTRIES: list[Country] = [
     Country(
         "burundi",
         "africa",
-        "franc",
+        "burundian_franc",
         ["kirundi", "french"],
         "gitega",
     ),
@@ -1152,7 +1152,7 @@ COUNTRIES: list[Country] = [
     Country(
         "djibouti",
         "africa",
-        "franc",
+        "djiboutian_franc",
         ["french", "arabic"],
         "djibouti",
     ),
@@ -1194,7 +1194,7 @@ COUNTRIES: list[Country] = [
     Country(
         "guinea",
         "africa",
-        "franc",
+        "guinean_franc",
         ["french"],
         "conakry",
     ),
@@ -1215,7 +1215,7 @@ COUNTRIES: list[Country] = [
     Country(
         "liberia",
         "africa",
-        "dollar",
+        "liberian_dollar",
         ["english"],
         "monrovia",
     ),
@@ -1229,7 +1229,7 @@ COUNTRIES: list[Country] = [
     Country(
         "malawi",
         "africa",
-        "kwacha",
+        "malawian_kwacha",
         ["english", "chichewa"],
         "lilongwe",
     ),
@@ -1250,7 +1250,7 @@ COUNTRIES: list[Country] = [
     Country(
         "mauritius",
         "africa",
-        "rupee",
+        "mauritian_rupee",
         ["english", "french"],
         "port_louis",
     ),
@@ -1264,7 +1264,7 @@ COUNTRIES: list[Country] = [
     Country(
         "namibia",
         "africa",
-        "dollar",
+        "namibian_dollar",
         ["english"],
         "windhoek",
     ),
@@ -1285,7 +1285,7 @@ COUNTRIES: list[Country] = [
     Country(
         "seychelles",
         "africa",
-        "rupee",
+        "seychellois_rupee",
         ["creole", "english", "french"],
         "victoria",
     ),
@@ -1299,7 +1299,7 @@ COUNTRIES: list[Country] = [
     Country(
         "sudan",
         "africa",
-        "pound",
+        "sudanese_pound",
         ["arabic", "english"],
         "khartoum",
     ),
@@ -1313,14 +1313,14 @@ COUNTRIES: list[Country] = [
     Country(
         "zambia",
         "africa",
-        "kwacha",
+        "zambian_kwacha",
         ["english"],
         "lusaka",
     ),
     Country(
         "libya",
         "africa",
-        "dinar",
+        "libyan_dinar",
         ["arabic"],
         "tripoli",
         cities=["banghazi"],
@@ -1329,7 +1329,7 @@ COUNTRIES: list[Country] = [
     Country(
         "south_sudan",
         "africa",
-        "pound",
+        "south_sudanese_pound",
         ["english"],
         "juba",
         cities=["wau"],
@@ -1338,7 +1338,7 @@ COUNTRIES: list[Country] = [
     Country(
         "dr_congo",
         "africa",
-        "franc",
+        "congolese_franc",
         ["french"],
         "kinshasa",
         cities=["lubumbashi"],
@@ -1347,7 +1347,7 @@ COUNTRIES: list[Country] = [
     Country(
         "somalia",
         "africa",
-        "shilling",
+        "somali_shilling",
         ["somali", "arabic"],
         "mogadishu",
         cities=["kismayo"],
@@ -1357,7 +1357,7 @@ COUNTRIES: list[Country] = [
     Country(
         "saudi_arabia",
         "middle_east",
-        "riyal",
+        "saudi_riyal",
         ["arabic"],
         "riyadh",
         memberships=["g20", "gcc", "brics"],
@@ -1365,7 +1365,7 @@ COUNTRIES: list[Country] = [
     Country(
         "united_arab_emirates",
         "middle_east",
-        "dirham",
+        "uae_dirham",
         ["arabic"],
         "abu_dhabi",
         memberships=["gcc", "brics"],
@@ -1373,7 +1373,7 @@ COUNTRIES: list[Country] = [
     Country(
         "qatar",
         "middle_east",
-        "riyal",
+        "qatari_riyal",
         ["arabic"],
         "doha",
         cities=["al_wakrah"],
@@ -1383,7 +1383,7 @@ COUNTRIES: list[Country] = [
     Country(
         "kuwait",
         "middle_east",
-        "dinar",
+        "kuwaiti_dinar",
         ["arabic"],
         "kuwait_city",
         cities=["hawalli"],
@@ -1393,7 +1393,7 @@ COUNTRIES: list[Country] = [
     Country(
         "oman",
         "middle_east",
-        "rial",
+        "omani_rial",
         ["arabic"],
         "muscat",
         cities=["salalah"],
@@ -1403,7 +1403,7 @@ COUNTRIES: list[Country] = [
     Country(
         "jordan",
         "middle_east",
-        "dinar",
+        "jordanian_dinar",
         ["arabic"],
         "amman",
         cities=["aqaba"],
@@ -1421,7 +1421,7 @@ COUNTRIES: list[Country] = [
     Country(
         "iran",
         "middle_east",
-        "rial",
+        "iranian_rial",
         ["persian"],
         "tehran",
         cities=["mashhad"],
@@ -1431,7 +1431,7 @@ COUNTRIES: list[Country] = [
     Country(
         "iraq",
         "middle_east",
-        "dinar",
+        "iraqi_dinar",
         ["arabic", "kurdish"],
         "baghdad",
         cities=["basra"],
@@ -1449,7 +1449,7 @@ COUNTRIES: list[Country] = [
     Country(
         "lebanon",
         "middle_east",
-        "pound",
+        "lebanese_pound",
         ["arabic"],
         "beirut",
         cities=["tripoli"],
@@ -1457,7 +1457,7 @@ COUNTRIES: list[Country] = [
     Country(
         "syria",
         "middle_east",
-        "pound",
+        "syrian_pound",
         ["arabic"],
         "damascus",
         cities=["aleppo"],
@@ -1466,7 +1466,7 @@ COUNTRIES: list[Country] = [
     Country(
         "yemen",
         "middle_east",
-        "rial",
+        "yemeni_rial",
         ["arabic"],
         "sanaa",
         cities=["aden"],
@@ -1535,7 +1535,7 @@ COUNTRIES: list[Country] = [
     Country(
         "solomon_islands",
         "oceania",
-        "dollar",
+        "solomon_islands_dollar",
         ["english"],
         "honiara",
         cities=["gizo"],
@@ -1543,35 +1543,35 @@ COUNTRIES: list[Country] = [
     Country(
         "kiribati",
         "oceania",
-        "dollar",
+        "aud",
         ["english", "gilbertese"],
         "tarawa",
     ),
     Country(
         "marshall_islands",
         "oceania",
-        "dollar",
+        "usd",
         ["english", "marshallese"],
         "majuro",
     ),
     Country(
         "micronesia",
         "oceania",
-        "dollar",
+        "usd",
         ["english"],
         "palikir",
     ),
     Country(
         "nauru",
         "oceania",
-        "dollar",
+        "aud",
         ["nauruan", "english"],
         "yaren",
     ),
     Country(
         "palau",
         "oceania",
-        "dollar",
+        "usd",
         ["palauan", "english"],
         "ngerulmud",
     ),
@@ -1588,7 +1588,7 @@ COUNTRIES: list[Country] = [
     Country(
         "argentina",
         "south_america",
-        "peso",
+        "argentine_peso",
         ["spanish"],
         "buenos_aires",
         cities=["cordoba"],
@@ -1598,7 +1598,7 @@ COUNTRIES: list[Country] = [
     Country(
         "chile",
         "south_america",
-        "peso",
+        "chilean_peso",
         ["spanish"],
         "santiago",
         cities=["valparaiso"],
@@ -1608,7 +1608,7 @@ COUNTRIES: list[Country] = [
     Country(
         "colombia",
         "south_america",
-        "peso",
+        "colombian_peso",
         ["spanish"],
         "bogota",
         cities=["medellin"],
@@ -1628,7 +1628,7 @@ COUNTRIES: list[Country] = [
     Country(
         "uruguay",
         "south_america",
-        "peso",
+        "uruguayan_peso",
         ["spanish"],
         "montevideo",
         cities=["salto"],
@@ -1674,7 +1674,7 @@ COUNTRIES: list[Country] = [
     Country(
         "guyana",
         "south_america",
-        "dollar",
+        "guyanese_dollar",
         ["english"],
         "georgetown",
         cities=["linden"],
@@ -1683,7 +1683,7 @@ COUNTRIES: list[Country] = [
     Country(
         "suriname",
         "south_america",
-        "dollar",
+        "surinamese_dollar",
         ["dutch"],
         "paramaribo",
         cities=["nieuw_nickerie"],
