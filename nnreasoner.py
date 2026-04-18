@@ -79,21 +79,23 @@ class NeuralNet(nn.Module):
     def __init__(self, hidden_size1, hidden_size2, num_classes):
         super(NeuralNet, self).__init__()
         self.l1 = nn.LazyLinear(hidden_size1)
-        self.sig1 = nn.Sigmoid()
-        self.l2 = nn.Linear(hidden_size1, num_classes)
-        self.sig2 = nn.Sigmoid()
-        # TODO: Not using l3 and sig3?
+        self.act1 = nn.ReLU() # Add ReLU
+        self.drop1 = nn.Dropout(0.2)
+        self.l2 = nn.Linear(hidden_size1, hidden_size2)
+        self.act2 = nn.ReLU()
         self.l3 = nn.Linear(hidden_size2, num_classes)
-        self.sig3 = nn.Sigmoid()
+        self.out = nn.Sigmoid()
 
     def forward(self, x):
         out = self.l1(x)
-        out = self.sig1(out)
+        out = self.act1(out)
+        out = self.drop1(out)
         out = self.l2(out)
-        out = self.sig2(out)
-        # out = self.l3(out)
-        # out= self.sig3(out)
+        out = self.act2(out)
+        out = self.l3(out)
+        out = self.out(out)
         return out
+
 
 
 def get_score(embedding: torch.Tensor, model: NeuralNet):
