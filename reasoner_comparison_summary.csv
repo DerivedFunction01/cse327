@@ -1,0 +1,14 @@
+folder,std_file,ming_file,plot_file,queries,std_mean_nodes,std_median_nodes,ming_mean_nodes,ming_median_nodes,std_wins,ming_wins,ties,both_success,std_only_success,ming_only_success,both_fail,mean_node_delta_std_minus_ming
+countries,countries/std-36-759-3-50.csv,countries/ming-36-759-3-50.csv,countries/reasoner_comparison-36-759-3-50.png,100,23357.36,8.50,101418.58,9.00,44,11,45,88,0,1,11,-78061.22
+countries64,countries64/std-36-759-3-64.csv,countries64/ming-36-759-3-64.csv,countries64/reasoner_comparison-36-759-3-64.png,100,37721.32,4.50,29768.82,4.50,28,16,56,90,0,2,8,7952.50
+countriesmod,countriesmod/std-36-759-3-50.csv,countriesmod/ming-36-759-3-50.csv,countriesmod/reasoner_comparison-36-759-3-50.png,100,42575.78,10.50,58771.11,23.50,42,17,41,88,0,3,9,-16195.33
+initial,initial/std-45-106-2-50.csv,initial/ming-45-106-2-50.csv,initial/reasoner_comparison-45-106-2-50.png,100,874.92,4.00,3717.05,4.00,10,22,68,99,0,0,1,-2842.13
+size200,size200/std-10-94-4-50.csv,size200/ming-10-94-4-50.csv,size200/reasoner_comparison-10-94-4-50.png,100,439454.22,18.00,40520.07,3.00,3,53,44,56,1,39,4,398934.15
+size200,size200/std-10-94-4-64.csv,size200/ming-10-94-4-64.csv,size200/reasoner_comparison-10-94-4-64.png,100,439454.22,18.00,32457.35,3.00,4,55,41,56,1,40,3,406996.87
+size200_mod,size200_mod/std-10-98-5-50.csv,size200_mod/ming-10-98-5-50.csv,size200_mod/reasoner_comparison-10-98-5-50.png,100,256241.14,8.00,117905.14,5.00,17,41,42,70,1,18,11,138336.00
+size300,size300/std-10-100-5-50.csv,size300/ming-10-100-5-50.csv,size300/reasoner_comparison-10-100-5-50.png,100,82.73,4.00,28.61,3.00,21,35,44,100,0,0,0,54.12
+size300,size300/std-10-100-5-64.csv,size300/ming-10-100-5-64.csv,size300/reasoner_comparison-10-100-5-64.png,100,82.73,4.00,29.39,3.00,14,38,48,100,0,0,0,53.34
+size300_mod,size300_mod/std-10-100-4-50.csv,size300_mod/ming-10-100-4-50.csv,size300_mod/reasoner_comparison-10-100-4-50.png,100,214407.72,3.50,50251.03,3.00,3,33,64,83,1,12,4,164156.69
+size400,size400/std-10-99-4-50.csv,size400/ming-10-99-4-50.csv,size400/reasoner_comparison-10-99-4-50.png,100,39.37,4.00,42997.57,4.00,13,12,75,97,3,0,0,-42958.20
+size400,size400/std-10-99-4-64.csv,size400/ming-10-99-4-64.csv,size400/reasoner_comparison-10-99-4-64.png,100,39.37,4.00,27670.96,5.00,47,9,44,99,1,0,0,-27631.59
+size400_mod,size400_mod/std-10-100-4-50.csv,size400_mod/ming-10-100-4-50.csv,size400_mod/reasoner_comparison-10-100-4-50.png,100,107500.89,5.00,2676.65,4.50,8,19,73,90,0,10,0,104824.24
