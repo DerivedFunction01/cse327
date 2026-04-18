@@ -1,0 +1,22 @@
+Reasoner comparison
+  std file:  countriesmod/std-36-759-3-50.csv
+  ming file: countriesmod/ming-36-759-3-50.csv
+  plot:      countriesmod/reasoner_comparison-36-759-3-50.png
+  txt file:   countriesmod/reasoner_comparison-36-759-3-50.txt
+
+Queries compared: 100
+std mean nodes:   42575.78
+std median nodes: 10.50
+ming mean nodes:  58771.11
+ming median nodes: 23.50
+
+std wins:         42
+ming wins:        17
+ties:             41
+
+both success:     88
+std only success: 0
+ming only success: 3
+both fail:        9
+
+mean(std - ming) nodes: -16195.33

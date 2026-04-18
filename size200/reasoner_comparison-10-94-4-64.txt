@@ -1,0 +1,22 @@
+Reasoner comparison
+  std file:  size200/std-10-94-4-64.csv
+  ming file: size200/ming-10-94-4-64.csv
+  plot:      size200/reasoner_comparison-10-94-4-64.png
+  txt file:   size200/reasoner_comparison-10-94-4-64.txt
+
+Queries compared: 100
+std mean nodes:   439454.22
+std median nodes: 18.00
+ming mean nodes:  32457.35
+ming median nodes: 3.00
+
+std wins:         4
+ming wins:        55
+ties:             41
+
+both success:     56
+std only success: 1
+ming only success: 40
+both fail:        3
+
+mean(std - ming) nodes: 406996.87
