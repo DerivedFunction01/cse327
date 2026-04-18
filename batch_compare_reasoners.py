@@ -37,6 +37,10 @@ class ComparisonPair:
         return self.std_path.with_name(f"reasoner_comparison-{self.suffix}.png")
 
     @property
+    def report_path(self) -> Path:
+        return self.std_path.with_name(f"reasoner_comparison-{self.suffix}.txt")
+
+    @property
     def size_tag(self) -> str:
         parts = self.std_path.stem.split("-")
         if len(parts) < 2:
@@ -79,6 +83,39 @@ def write_summary(summary_rows: Iterable[dict[str, object]], output_path: Path) 
         writer.writerows(rows)
 
 
+def write_report(
+    pair: ComparisonPair,
+    summary: dict[str, float],
+    output_path: Path,
+    root: Path,
+) -> None:
+    text = (
+        "Reasoner comparison\n"
+        f"  std file:  {pair.std_path.relative_to(root)}\n"
+        f"  ming file: {pair.ming_path.relative_to(root)}\n"
+        f"  plot:      {pair.plot_path.relative_to(root)}\n"
+        f"  txt file:   {pair.report_path.relative_to(root)}\n"
+        "\n"
+        f"Queries compared: {int(summary['queries'])}\n"
+        f"std mean nodes:   {summary['std_mean_nodes']:.2f}\n"
+        f"std median nodes: {summary['std_median_nodes']:.2f}\n"
+        f"ming mean nodes:  {summary['ming_mean_nodes']:.2f}\n"
+        f"ming median nodes: {summary['ming_median_nodes']:.2f}\n"
+        "\n"
+        f"std wins:         {int(summary['std_wins'])}\n"
+        f"ming wins:        {int(summary['ming_wins'])}\n"
+        f"ties:             {int(summary['ties'])}\n"
+        "\n"
+        f"both success:     {int(summary['both_success'])}\n"
+        f"std only success: {int(summary['std_success_only'])}\n"
+        f"ming only success: {int(summary['ming_success_only'])}\n"
+        f"both fail:        {int(summary['both_fail'])}\n"
+        "\n"
+        f"mean(std - ming) nodes: {summary['mean_node_delta_std_minus_ming']:.2f}\n"
+    )
+    output_path.write_text(text)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Compare every std/ming CSV pair under the current directory."
@@ -115,6 +152,7 @@ def main() -> int:
             "std_file": str(pair.std_path.relative_to(root)),
             "ming_file": str(pair.ming_path.relative_to(root)),
             "plot_file": str(pair.plot_path.relative_to(root)),
+            "report_file": str(pair.report_path.relative_to(root)),
             "queries": int(summary["queries"]),
             "std_mean_nodes": f"{summary['std_mean_nodes']:.2f}",
             "std_median_nodes": f"{summary['std_median_nodes']:.2f}",
@@ -130,13 +168,15 @@ def main() -> int:
             "mean_node_delta_std_minus_ming": f"{summary['mean_node_delta_std_minus_ming']:.2f}",
         }
         summary_rows.append(row)
+        write_report(pair, summary, pair.report_path, root)
 
         print(
             f"{pair.std_path.parent.relative_to(root)}: "
             f"size={pair.size_tag}, "
             f"std mean={summary['std_mean_nodes']:.2f}, "
             f"ming mean={summary['ming_mean_nodes']:.2f}, "
-            f"plot={pair.plot_path.name}"
+            f"plot={pair.plot_path.name}, "
+            f"txt={pair.report_path.name}"
         )
 
     summary_path = args.summary
